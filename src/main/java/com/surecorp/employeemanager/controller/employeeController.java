@@ -38,7 +38,7 @@ public class employeeController {
     @PostMapping("/add")
     public ResponseEntity<Employee> addEmployee(@RequestBody Employee employee){
         Employee newEmployee = employeeService.addEmployee(employee);
-        return new ResponseEntity<>(employee, HttpStatus.CREATED);
+        return new ResponseEntity<>(newEmployee, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
